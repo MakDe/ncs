@@ -1,0 +1,12 @@
+[Unit]
+Description = Java Service
+After network.target = ncsfree.service
+
+[Service]
+Type = forking
+ExecStart = /opt/ncsfree/ncsFreeService.sh start
+ExecStop = /opt/ncsfree/ncsFreeService.sh stop
+ExecReload = /opt/ncsfree/ncsFreeService.sh reload
+
+[Install]
+WantedBy=multi-user.target

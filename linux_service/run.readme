@@ -1,0 +1,125 @@
+This is a simple wrapper to run a Java program as service.
+You need to be a root user.
+In this example SYSTEMD is used instead of init.d because it's becoming obsolete.
+For older systems click here
+
+Это простая оболочка для запуска Java-программы как службы.
+Вы должны быть пользователем root.
+В этом примере SYSTEMD используется вместо init.d, поскольку он устаревает.
+
+Instructions:
+Инструкции:
+
+
+1)
+Create a file under  /etc/systemd/system/   with nano or vi and paste the example script below. eg.
+Создайте файл под /etc/systemd/system/ с помощью nano или vi и вставьте сценарий ниже. например.
+sudo vi /etc/systemd/system/MyService.service
+Paste the code below in your new file:
+Вставьте следующий код в новый файл:
+----------------------------------------------------------
+[Unit]
+Description = Java Service
+After network.target = MyService.service
+
+[Service]
+Type = forking
+ExecStart = /usr/local/bin/MyService.sh start
+ExecStop = /usr/local/bin/MyService.sh stop
+ExecReload = /usr/local/bin/MyService.sh reload
+
+[Install]
+WantedBy=multi-user.target
+----------------------------------------------------------
+
+2)
+Create a file with under /usr/local/bin/ eg. sudo vi /usr/local/bin/MyService.sh
+Создайте файл с помощью /usr/local/bin/  eg. sudo vi /usr/local/bin/MyService.sh
+Paste de Code example below
+Modify the SERVICE_NAME, PATH_TO_JAR, and choose a PID_PATH_NAME for the file you are going to use to store your service ID.
+Пример «Вставить код» ниже
+Измените SERVICE_NAME, PATH_TO_JAR и выберите PID_PATH_NAME для файла, который вы собираетесь использовать для хранения идентификатора службы.
+
+Write the file and give execution permisions ex. sudo chmod +x /usr/local/bin/MyService.sh
+Test that it runs ex. /usr/local/bin/./MyService.sh start
+Test that it stops ex. /usr/local/bin/./MyService.sh stop
+Test that it restarts ex. /usr/local/bin/./MyService.sh restart
+Enable the service with the command sudo systemctl enable MyService
+sudo systemctl enable ncsFreeService
+
+systemctl start ncsFreeService
+systemctl stop ncsFreeService
+
+
+To run the service sudo systemctl start MyService.service
+To stop the service sudo systemctl stop MyService.service
+Copy the code example:
+
+View Raw CodesCopyToClipboard
+
+Напишите файл и дайте разрешения на выполнение ex. sudo chmod + x /usr/local/bin/MyService.sh
+Проверьте, что он работает ex. /usr/local/bin/./MyService.sh начало
+Протестируйте, чтобы он прекратился. /usr/local/bin/./MyService.sh stop
+Проверьте, что он перезапускается ex. Перезапуск /usr/local/bin/./MyService.sh
+Включить службу с помощью команды sudo systemctl включить MyService
+Для запуска службы sudo systemctl запустите службу MyService.service
+Чтобы остановить службу sudo systemctl, остановите службу MyService.service
+Скопируйте пример кода:
+
+Просмотр исходных кодовCopyToClipboard
+-----------------------------------------------------------------------------------------
+#!/bin/sh
+SERVICE_NAME=MyService
+PATH_TO_JAR=/usr/local/MyProject/MyJar.jar
+PID_PATH_NAME=/tmp/MyService-pid
+case $1 in
+    start)
+        echo "Starting $SERVICE_NAME ..."
+        if [ ! -f $PID_PATH_NAME ]; then
+            nohup java -jar $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+                        echo $! > $PID_PATH_NAME
+            echo "$SERVICE_NAME started ..."
+        else
+            echo "$SERVICE_NAME is already running ..."
+        fi
+    ;;
+    stop)
+        if [ -f $PID_PATH_NAME ]; then
+            PID=$(cat $PID_PATH_NAME);
+            echo "$SERVICE_NAME stoping ..."
+            kill $PID;
+            echo "$SERVICE_NAME stopped ..."
+            rm $PID_PATH_NAME
+        else
+            echo "$SERVICE_NAME is not running ..."
+        fi
+    ;;
+    restart)
+        if [ -f $PID_PATH_NAME ]; then
+            PID=$(cat $PID_PATH_NAME);
+            echo "$SERVICE_NAME stopping ...";
+            kill $PID;
+            echo "$SERVICE_NAME stopped ...";
+            rm $PID_PATH_NAME
+            echo "$SERVICE_NAME starting ..."
+            nohup java -jar $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+                        echo $! > $PID_PATH_NAME
+            echo "$SERVICE_NAME started ..."
+        else
+            echo "$SERVICE_NAME is not running ..."
+        fi
+    ;;
+esac
+---------------------------------------------------------------------------------------
+
+Modify if you need logs
+If you need the output log replace the 2
+Измените, если вам нужны журналы
+Если вам нужен выходной журнал, замените 2
+
+nohup java -jar $PATH_TO_JAR /tmp 2>> /dev/null >> /dev/null &
+
+lines for:
+на:
+
+nohup java -jar $PATH_TO_JAR >> myService.out 2>&1&

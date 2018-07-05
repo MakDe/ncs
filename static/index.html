@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>АИС Национальная система сертификации</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="/static/gerb.png" rel="icon">
+  <link href="/static/gerb.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body id="body">
+
+  <!--==========================
+    Top Bar
+  ============================-->
+  <Style>
+    body {
+      background: url(/static/img/search-bg-d.svg);
+    }
+    .main-banner {
+      width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0px 0;
+    }
+
+
+
+
+
+    .main-banner .logo {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+
+    .main-banner .logo:hover,
+    .main-banner .logo:focus {
+      text-decoration: none;
+    }
+
+    .main-banner .logo--wrap {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 357px;
+      flex: 0 0 357px;
+    }
+    .main-banner .logo--wrap1 {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 487px;
+      flex: 0 0 487px;
+    }
+
+    .main-banner .logo__image {
+      margin-right: 15px;
+    }
+
+    .main-banner .logo__title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 3px;
+      color: black;
+    }
+
+    .main-banner .logo__description {
+      font-size: 14px;
+      line-height: 1.25;
+      color: black;
+    }
+    #topbar {
+      padding: 10px 0 0 0;
+    }
+
+    #header {
+      padding: 0px 0;
+    }
+
+    .nav-menu1{
+      background-color: #2c3756;
+    }
+    .nav-menu1 li  a {
+      color: #ffffff;
+    }
+    @media (max-width: 799px) {
+      .main-banner .logo--wrap {
+        -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+      }
+    }
+
+
+
+
+
+    @media (max-width: 799px) {
+
+
+        .main-banner .logo__image {
+          margin-right: 10px;
+          width: 24px;
+          height: 24px;
+        }
+
+      visibility: hidden;
+
+
+      .main-banner .logo__description {
+        display: none;
+      }
+      .main-banner .logo--wrap1 {
+        display: none;
+      }
+    }
+
+
+
+
+
+
+  </Style>
+
+
+  <section id="topbar" class="d-lg-block">
+    <div class="container  clearfix">
+
+      <div class="main-banner">
+
+
+        <div class="logo--wrap">
+          <a href="/portal/gost/" class="logo">
+
+
+            <img src="https://www.gost.ru/navigationRST/images/header/gerb.png" alt="Логотип Росстандарта" class="logo__image">
+
+
+
+            <div class="logo__text">
+              <div class="logo__title">Росстандарт</div>
+              <div class="logo__description">
+                Национальная система сертификации
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+
+        <div class="logo--wrap1">
+            <div class="logo__text">
+              <div class="logo__title">Горячая линия <i class="fa fa-phone"></i> 8(495)531-26-40</div>
+              <div class="logo__description">
+                По вопросам работы системы обращаться на адрес <i class="fa fa-envelope-o"></i> <a href="mailto:ncs@gostinfo.ru">ncs@gostinfo.ru</a>
+              </div>
+            </div>
+
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+  </section>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#body" class="scrollto"><span></span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <!--<li class="menu-active"><a href="#body">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>-->
+          <li class="menu-has-children"><a href="">Реестры</a>
+            <ul class="nav-menu1" >
+              <li><a href="#">Реестр объектов оценки соответствия, маркированных <br> знаком национальной системы стандартизации</a></li>
+              <li><a href="#">Реестр органов по сертификации</a></li>
+              <li><a href="#"> Реестр испытательных лабораторий</a></li>
+              <li><a href="#"> Реестр органов инспекции</a></li>
+              <li><a href="#"> Реестр технических экспертов</a></li>
+              <li><a href="#"> Реестр документов НСС</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
+      <!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <!--<section id="intro">
+
+    <div class="intro-content">
+      <h2>Making <span>your ideas</span><br>happen!</h2>
+      <div>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        <a href="#portfolio" class="btn-projects scrollto">Our Projects</a>
+      </div>
+    </div>
+
+    <div id="intro-carousel" class="owl-carousel" >
+      <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
+      <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
+    </div>
+
+  </section>-->
+
+  <!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Section
+    ============================-->
+    <!-- <section id="about" class="wow fadeInUp">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-6 about-img">
+             <img src="img/about-img.jpg" alt="">
+           </div>
+
+           <div class="col-lg-6 content">
+             <h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>
+             <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+
+             <ul>
+               <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+               <li><i class="ion-android-checkmark-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
+               <li><i class="ion-android-checkmark-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
+             </ul>
+
+           </div>
+         </div>
+
+       </div>
+     </section>-->
+    <!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+        <div class="section-header">
+          <h2>Реестры</h2>
+          <p></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="fa fa-bar-chart"></i></div>
+              <h4 class="title"><a href="">Объекты оценки соответствия</a></h4>
+              <p class="description">Реестр объектов оценки соответствия, маркированных знаком национальной системы стандартизации.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="fa fa-picture-o"></i></div>
+              <h4 class="title"><a href="">Органы по сертификации</a></h4>
+              <p class="description">Реестр органов по сертификации.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">Испытательные лаборатории</a></h4>
+              <p class="description"> Реестр испытательных лабораторий.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href="">Технические эксперты</a></h4>
+              <p class="description">Реестр технических экспертов</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-shopping-bag"></i></div>
+              <h4 class="title"><a href="">Реестр органов инспекции</a></h4>
+              <p class="description">Реестр органов инспекции.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight" data-wow-delay="0.2s">
+              <div class="icon"><i class="fa fa-map"></i></div>
+              <h4 class="title"><a href=""> Реестр документов НСС</a></h4>
+              <p class="description">Реестр документов национальной системы стандартизации</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+
+    <section id="clients" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Clients</h2>
+          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12">
+            <dl>
+
+              <dt>Реквизиты решения органа по сертификации о соответствии
+                объекта оценки соответствия</dt>
+              <dd>7-НСС</dd>
+              <dt>Дата начала действия</dt>
+              <dd>2018-04-27</dd>
+              <dt>Дата окончания действия</dt>
+              <dd>2021-04-26</dd>
+              <dt>Наименование заявителя</dt>
+              <dd>Общество с ограниченной ответственностью «Ласточка»</dd>
+              <dt>Местонахождение заявителя</dt>
+              <dd>403010, Россия, Волгоградская область, Городищенский район, рабочий поселок Ерзовка, улица Комсомольская, квартал 8, дом 6а</dd>
+              <dt>Номер телефона заявителя</dt>
+              <dd>
+                <ul>
+                  <li>+78446847890</li>
+                </ul>
+              </dd>
+              <dt>Адрес электронной почты заявителя</dt>
+              <dd>
+                <ul>
+                  <li>epp@stivado.ru</li>
+                </ul>
+              </dd>
+              <dt>Наименование изготовителя продукции</dt>
+              <dd>Общество с ограниченной ответственностью «Ласточка»</dd>
+              <dt>Местонахождение изготовителя продукции</dt>
+              <dd>400075, Россия, Волгоградская область, г. Волгоград, улица имени Шопена, д. 4</dd>
+              <dt>Номер телефона изготовителя продукции</dt>
+              <dd>
+                <ul>
+                  <li>+78442911031</li>
+                </ul>
+              </dd>
+              <dt>Адрес электронной почты изготовителя продукции</dt>
+              <dd>
+                <ul>
+                  <li>shop@stivado.ru</li>
+                </ul>
+              </dd>
+              <dt>Наименование органа по сертификации, проводившего работы по
+                подтверждению соответствия</dt>
+              <dd>Орган по сертификации продукции, услуг и систем менеджмента ФБУ «Волгоградский ЦСМ»</dd>
+              <dt>Местонахождение органа по сертификации, проводившего работы
+                по подтверждению соответствия</dt>
+              <dd>400081, г. Волгоград, ул. Бурейская, 6</dd>
+              <dt>Номер телефона органа по сертификации, проводившего работы
+                по подтверждению соответствия</dt>
+              <dd>
+                <ul>
+                  <li>+78442394717</li>
+                </ul>
+              </dd>
+              <dt>Адрес электронной почты органа по сертификации, проводившего
+                работы по подтверждению соответствия</dt>
+              <dd>
+                <ul>
+                  <li>sert@volgacsm.ru</li>
+                </ul>
+              </dd>
+              <dt>Ф.И.О. руководителя органа по сертификации, проводившего
+                работы по подтверждению соответствия</dt>
+              <dd>Абросимова Ирина Валентиновна</dd>
+              <dt>Информация об объекте оценки соответствия, позволяющая его
+                идентифицировать</dt>
+              <dd>Печенье сахарное декорированное: (STIVADO) Стивадо Ванильное  с темно-белым декором, (STIVADO) Стивадо со вкусом сливок с темным декором, (STIVADO) Стивадо со вкусом сливок с темно-белым декором, (STIVADO) Стивадо К кофе с темным декором, (STIVADO) Стивадо К кофе с темно-белым декором, (STIVADO) Стивадо К чаю с темным декором, (STIVADO) Стивадо К чаю с темно-белым декором, (STIVADO) Стивадо Популярное с темным декором, (STIVADO) Стивадо Популярное  с темно-белым декором, (STIVADO) Стивадо с какао с белым декором.  Печенье сахарное глазированное и декорированное: (STIVADO) Стивадо Ванильное в белой глазури с темным декором, (STIVADO) Стивадо Ванильное в глазури с белым декором, (STIVADO) Стивадо Молочное в глазури с белым декором.  Печенье сахарное частично глазированное и декорированное: (STIVADO) Стивадо Ванильное с белой глазурью и темно-белым декором, (STIVADO) Стивадо со вкусом сливок с белой глазурью и темно-белым декором, (STIVADO) Стивадо со вкусом сливок с глазурью и темно-белым декором, (STIVADO) Стивадо К кофе с глазурью и декором, (STIVADO) Стивадо К кофе с глазурью  и темно-белым декором, (STIVADO) Стивадо К чаю с глазурью и декором, (STIVADO) Стивадо К чаю с глазурью  и темно-белым декором, (STIVADO) Стивадо Молочное с белой глазурью и темно-белым декором, (STIVADO) Стивадо Молочное с глазурью и темно-белым декором, (STIVADO) Стивадо Популярное с белой глазурью  и темно-белым декором, (STIVADO) Стивадо Популярное с глазурью и темно-белым декором, (STIVADO) Стивадо Привет с глазурью и декором, (STIVADO) Стивадо Привет с глазурью и темно-белым декором, (STIVADO) Стивадо Привет с белой глазурью и темно-белым декором, (STIVADO) Стивадо со вкусом йогурта с глазурью и темно-белым декором.  Печенье сахарное с добавлением частично глазированное и декорированное: (STIVADO) Стивадо с какао с белой глазурью и белым декором.  Печенье сахарное с начинкой: (KREMBERI) Крембери со вкусом лимона, (KREMBERI) Крембери со вкусом малины, (KREMBERI) Крембери со вкусом апельсина, (KREMBERI) Крембери со вкусом клубники, (KREMBERI) Крембери со вкусом черной смородины, (KREMBERI) Крембери со сливочным вкусом, (KREMBERI) Крембери со вкусом шоколада, (KREMBERI) Крембери со вкусом фундука, (KREMBERI) Крембери со вкусом карамели, (KREMBERI) Крембери со вкусом яблока, (KREMBERI) Крембери с имбирем, (KREMBERI) Крембери со вкусом крем-брюле, (KREMBERI) Крембери со вкусом йогурта.   Печенье овсяное: (STIVADO) Стивадо овсяное с корицей, (STIVADO) Стивадо овсяное.  Печенье овсяное с добавлениями: (STIVADO) Стивадо овсяное с изюмом, (STIVADO) Стивадо овсяное с ядром подсолнечника, (STIVADO) Стивадо овсяное с кокосовой стружкой, (STIVADO) Стивадо овсяное с арахисом.  Печенье овсяное декорированное: (STIVADO) Стивадо овсяное с темным декором, (STIVADO) Стивадо овсяное с белым декором, (STIVADO) Стивадо овсяное с темно-белым декором, (STIVADO) Стивадо овсяное с корицей с темным декором, (STIVADO) Стивадо овсяное с корицей с темно-белым декором.  Печенье овсяное с добавлениями декорированное: (STIVADO) Стивадо овсяное с арахисом с темным декором, (STIVADO) Стивадо овсяное с арахисом с белым декором, (STIVADO) Стивадо овсяное с арахисом с темно-белым декором, (STIVADO) Стивадо овсяное с изюмом с темным декором, (STIVADO) Стивадо овсяное с изюмом с темно-белым декором, (STIVADO) Стивадо овсяное с ядром подсолнечника с темным декором, (STIVADO) Стивадо овсяное с ядром подсолнечника с темно-белым декором, (STIVADO) Стивадо овсяное с кокосовой стружкой с темным декором, (STIVADO) Стивадо овсяное с кокосовой стружкой с темно-белым декором.  Печенье овсяное частично глазированное и декорированное: (STIVADO) Стивадо овсяное с корицей с глазурью и темно-белым декором, (STIVADO) Стивадо овсяное с корицей с белой глазурью и темно-белым декором, (STIVADO) Стивадо овсяное с корицей с белой глазурью и белым декором, (STIVADO) Стивадо овсяное с корицей с глазурью и декором, (STIVADO) Стивадо овсяное с глазурью и темно-белым декором.  Печенье овсяное с добавлением частично глазированное и декорированное: (STIVADO) Стивадо овсяное с ядром подсолнечника с глазурью и темно-белым декором, (STIVADO) Стивадо овсяное с изюмом с глазурью и темно-белым декором, (STIVADO) Стивадо овсяное с кокосовой стружкой с глазурью и темно-белым декором, (STIVADO) Стивадо овсяное с арахисом с глазурью и темно-белым декором.  Печенье сдобное: (STIVADO) Стивадо Курабье, (STIVADO) Стивадо сдобное со вкусом сыра, (STIVADO) Стивадо сдобное с сыром, (STIVADO) Стивадо сдобное сырное, (STIVADO) Стивадо сдобное со вкусом творога, (STIVADO) Стивадо сдобное с творогом, (STIVADO) Стивадо сдобное творожное, (STIVADO) Стивадо сдобное мини.   Печенье сдобное с добавлениями: (STIVADO) Стивадо сдобное с семенами льна, (STIVADO) Стивадо сдобное с какао и семенами кунжута, (STIVADO) Стивадо сдобное с какао и семенами льна, (STIVADO) Стивадо сдобное с какао и лепестками арахиса, (STIVADO) Стивадо сдобное с какао, (STIVADO) Стивадо сдобное с лимоном и лепестками арахиса, (STIVADO) Стивадо сдобное со злаками, (STIVADO) Стивадо сдобное мини с какао.  Печенье сдобное с начинкой: (STIVADO) Стивадо сдобное с вареной сгущенкой, (STIVADO) Стивадо сдобное ассорти с вареной сгущенкой.  Печенье сдобное частично глазированное и декорированное: (STIVADO) Стивадо сдобное с глазурью и декором, (STIVADO) Стивадо сдобное ассорти с глазурью и декором.</dd>
+              <dt>Информация о национальных стандартах на соответствие
+                требованиям которых проводилась оценка соответствия</dt>
+              <dd>
+                <ul>
+                  <li>ГОСТ 24901-2014 "Печенье. Общие технические условия"</li>
+                </ul>
+              </dd>
+              <dt>Информация о документах, представленных заявителем в орган
+                по сертификации в качестве доказательства соответствия продукции
+                требованиям национальных стандартов</dt>
+              <dd>
+                <ul>
+                  <li>Протокол испытаний от 27.02.2018 № 557 испытательного центра Федерального бюджетного учреждения «Государственный региональный центр стандартизации</li>
+                  <li>метрологии и испытаний в Волгоградской области» (аттестат аккредитации № РОСС RU.0001.21ПУ09). Декларации о соответствии:  ЕАЭС N RU Д-RU.АЖ08.В.00500 от 27.02.2018 по 26.02.2021</li>
+                  <li>ЕАЭС N RU Д-RU.АЖ08.В.00537 от 17.04.2018 по 16.04.2021</li>
+                </ul>
+              </dd>
+              <dt>Информация о проведенных исследованиях (испытаниях) и
+                измерениях</dt>
+              <dd>Протокола испытаний от 25.04.2018 № 1282 испытательного центра Федерального бюджетного учреждения «Государственный региональный центр стандартизации, метрологии и испытаний в Волгоградской области» (аттестат аккредитации № РОСС RU.0001.21ПУ09). Протоколов идентификации от 11.04.2018 г. № 7-НСС.</dd>
+              <dt>Дата и причина приостановления, возобновления или
+                прекращения действия сертификата соответствия</dt>
+              <dd>
+                <ul>
+
+                </ul>
+              </dd>
+              <dt>Дата, срок продления действия сертификата соответствия и
+                основание для его продления</dt>
+              <dd>
+                <ul>
+
+                </ul>
+              </dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!--<section id="clients" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Clients</h2>
+          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+        </div>
+
+        <div class="owl-carousel clients-carousel">
+          <img src="img/clients/client-1.png" alt="">
+          <img src="img/clients/client-2.png" alt="">
+          <img src="img/clients/client-3.png" alt="">
+          <img src="img/clients/client-4.png" alt="">
+          <img src="img/clients/client-5.png" alt="">
+          <img src="img/clients/client-6.png" alt="">
+          <img src="img/clients/client-7.png" alt="">
+          <img src="img/clients/client-8.png" alt="">
+        </div>
+
+      </div>
+    </section>-->
+    <!-- #clients -->
+
+    <!--==========================
+      Our Portfolio Section
+    ============================-->
+    <!-- <section id="portfolio" class="wow fadeInUp">
+       <div class="container">
+         <div class="section-header">
+           <h2>Our Portfolio</h2>
+           <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+         </div>
+       </div>
+
+       <div class="container-fluid">
+         <div class="row no-gutters">
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/1.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/1.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 1</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/2.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/2.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 2</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/3.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/3.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 3</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/4.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/4.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 4</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/5.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/5.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 5</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/6.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/6.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 6</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/7.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/7.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 7</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-4">
+             <div class="portfolio-item wow fadeInUp">
+               <a href="img/portfolio/8.jpg" class="portfolio-popup">
+                 <img src="img/portfolio/8.jpg" alt="">
+                 <div class="portfolio-overlay">
+                   <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 8</h2></div>
+                 </div>
+               </a>
+             </div>
+           </div>
+
+         </div>
+
+       </div>
+     </section>-->
+    <!-- #portfolio -->
+
+    <!--==========================
+      Testimonials Section
+    ============================-->
+    <!-- <section id="testimonials" class="wow fadeInUp">
+       <div class="container">
+         <div class="section-header">
+           <h2>Testimonials</h2>
+           <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+         </div>
+         <div class="owl-carousel testimonials-carousel">
+
+             <div class="testimonial-item">
+               <p>
+                 <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                 <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+               </p>
+               <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+               <h3>Saul Goodman</h3>
+               <h4>Ceo &amp; Founder</h4>
+             </div>
+
+             <div class="testimonial-item">
+               <p>
+                 <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                 <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+               </p>
+               <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+               <h3>Sara Wilsson</h3>
+               <h4>Designer</h4>
+             </div>
+
+             <div class="testimonial-item">
+               <p>
+                 <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                 <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+               </p>
+               <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+               <h3>Jena Karlis</h3>
+               <h4>Store Owner</h4>
+             </div>
+
+             <div class="testimonial-item">
+               <p>
+                 <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                 <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+               </p>
+               <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+               <h3>Matt Brandon</h3>
+               <h4>Freelancer</h4>
+             </div>
+
+             <div class="testimonial-item">
+               <p>
+                 <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+                 Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                 <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+               </p>
+               <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
+               <h3>John Larson</h3>
+               <h4>Entrepreneur</h4>
+             </div>
+
+         </div>
+
+       </div>
+     </section>-->
+    <!-- #testimonials -->
+
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <!-- <section id="call-to-action" class="wow fadeInUp">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-9 text-center text-lg-left">
+             <h3 class="cta-title">Call To Action</h3>
+             <p class="cta-text"> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+           </div>
+           <div class="col-lg-3 cta-btn-container text-center">
+             <a class="cta-btn align-middle" href="#">Call To Action</a>
+           </div>
+         </div>
+
+       </div>
+     </section>-->
+    <!-- #call-to-action -->
+
+    <!--==========================
+      Our Team Section
+    ============================-->
+    <!-- <section id="team" class="wow fadeInUp">
+       <div class="container">
+         <div class="section-header">
+           <h2>Our Team</h2>
+         </div>
+         <div class="row">
+           <div class="col-lg-3 col-md-6">
+             <div class="member">
+               <div class="pic"><img src="img/team-1.jpg" alt=""></div>
+               <div class="details">
+                 <h4>Walter White</h4>
+                 <span>Chief Executive Officer</span>
+                 <div class="social">
+                   <a href=""><i class="fa fa-twitter"></i></a>
+                   <a href=""><i class="fa fa-facebook"></i></a>
+                   <a href=""><i class="fa fa-google-plus"></i></a>
+                   <a href=""><i class="fa fa-linkedin"></i></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-6">
+             <div class="member">
+               <div class="pic"><img src="img/team-2.jpg" alt=""></div>
+               <div class="details">
+                 <h4>Sarah Jhinson</h4>
+                 <span>Product Manager</span>
+                 <div class="social">
+                   <a href=""><i class="fa fa-twitter"></i></a>
+                   <a href=""><i class="fa fa-facebook"></i></a>
+                   <a href=""><i class="fa fa-google-plus"></i></a>
+                   <a href=""><i class="fa fa-linkedin"></i></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-6">
+             <div class="member">
+               <div class="pic"><img src="img/team-3.jpg" alt=""></div>
+               <div class="details">
+                 <h4>William Anderson</h4>
+                 <span>CTO</span>
+                 <div class="social">
+                   <a href=""><i class="fa fa-twitter"></i></a>
+                   <a href=""><i class="fa fa-facebook"></i></a>
+                   <a href=""><i class="fa fa-google-plus"></i></a>
+                   <a href=""><i class="fa fa-linkedin"></i></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+
+           <div class="col-lg-3 col-md-6">
+             <div class="member">
+               <div class="pic"><img src="img/team-4.jpg" alt=""></div>
+               <div class="details">
+                 <h4>Amanda Jepson</h4>
+                 <span>Accountant</span>
+                 <div class="social">
+                   <a href=""><i class="fa fa-twitter"></i></a>
+                   <a href=""><i class="fa fa-facebook"></i></a>
+                   <a href=""><i class="fa fa-google-plus"></i></a>
+                   <a href=""><i class="fa fa-linkedin"></i></a>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+
+       </div>
+     </section>-->
+    <!-- #team -->
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <!--<section id="contact" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact Us</h2>
+          <p>Sed tamen tempor magna labore dolore dolor sint tempor duis magna elit veniam aliqua esse amet veniam enim export quid quid veniam aliqua eram noster malis nulla duis fugiat culpa esse aute nulla ipsum velit export irure minim illum fore</p>
+        </div>
+
+        <div class="row contact-info">
+
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="ion-ios-location-outline"></i>
+              <h3>Address</h3>
+              <address>A108 Adam Street, NY 535022, USA</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="ion-ios-telephone-outline"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="ion-ios-email-outline"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:info@example.com">info@example.com</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="google-map" data-latitude="40.713732" data-longitude="-74.0092704"></div>
+
+      <div class="container">
+        <div class="form">
+          <div id="sendmessage">Your message has been sent. Thank you!</div>
+          <div id="errormessage"></div>
+          <form action="" method="post" role="form" class="contactForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group col-md-6">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <div class="validation"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+    </section>-->
+    <!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; <strong>ФГУП СТАНДАРТИНФОРМ</strong>. Все права защищены
+      </div>
+      <div class="credits">
+
+
+      </div>
+    </div>
+  </footer>
+  <!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+  <script src="lib/sticky/sticky.js"></script>
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script>-->
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
