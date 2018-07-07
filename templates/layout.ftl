@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
     <title>${context.title} | АИС Национальная система сертификации</title>
@@ -12,7 +12,8 @@
     <link href="/static/gerb.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+          rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
     <link href="/static/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -33,14 +34,16 @@
     <link href="/static/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
 
-
     <!-- Main Stylesheet File -->
     <link href="/static/css/style.css" rel="stylesheet">
-    ${context.style}
+
+    <!-- Custom -->
+    <link href="/static/css/custom.css" rel="stylesheet">
+${context.style}
 
 </head>
 
-<body id="body">
+<body id="body" class="custom">
 
 <!--==========================
   Top Bar
@@ -49,7 +52,6 @@
     body {
         background: url(/static/img/search-bg-d.svg);
     }
-
 
     .main-banner {
         width: 100%;
@@ -64,10 +66,6 @@
         justify-content: space-between;
         padding: 0px 0px 10px 0px;
     }
-
-
-
-
 
     .main-banner .logo {
         display: -webkit-box;
@@ -88,6 +86,7 @@
         -ms-flex: 0 0 357px;
         flex: 0 0 357px;
     }
+
     .main-banner .logo--wrap1 {
         -webkit-box-flex: 0;
         -ms-flex: 0 0 487px;
@@ -111,6 +110,7 @@
         line-height: 1.25;
         color: black;
     }
+
     #topbar {
         padding: 10px 0 0 0;
     }
@@ -119,88 +119,93 @@
         padding: 0px 0;
     }
 
-    .nav-menu1{
+    .nav-menu1 {
         background-color: #2c3756;
     }
-    .nav-menu1 li  a {
+
+    .nav-menu1 li a {
         color: #ffffff;
     }
+
     @media (max-width: 768px) {
         .main-banner .logo--wrap {
             -ms-flex-preferred-size: auto;
             flex-basis: auto;
             flex: 0 0 0px;
         }
+
         #services {
             padding: 30px 0 0 0;
             background: url(/static/service-bg.jpg) no-repeat top center;
             background-size: cover;
             min-height: 200px;
         }
-        #header-sticky-wrapper{
+
+        #header-sticky-wrapper {
             display: none;
         }
 
-        #vmap{
+        #vmap {
             height: 220px;
             width: 410px;
         }
+
         #txtStatWorkerTotal {
             display: block;
             position: inherit;
 
-            font-family: "PT Sans",sans-serif;
+            font-family: "PT Sans", sans-serif;
 
             text-transform: uppercase;
             line-height: 25px;
             color: #1f6bb0;
-            font-size: 12px; font-weight: bold;
+            font-size: 12px;
+            font-weight: bold;
             text-align: center;
         }
+
         #txtStatProductionTotal {
             display: block;
             position: inherit;
 
-            font-family: "PT Sans",sans-serif;
+            font-family: "PT Sans", sans-serif;
 
             text-transform: uppercase;
             line-height: 25px;
             color: #1f6bb0;
-            font-size: 12px; font-weight: bold;
+            font-size: 12px;
+            font-weight: bold;
             text-align: center;
         }
-        .txt-stat-value{
-            font-size: 12px; font-weight: bold;
+
+        .txt-stat-value {
+            font-size: 12px;
+            font-weight: bold;
             vertical-align: middle;
         }
 
-
-
         #footer {
-             position: static;
-             left: 0;
-             bottom: 0;
-             width: 100%;
-             height: 80px;
+            position: static;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 80px;
         }
 
     }
 
-
-
-
-
     @media (max-width: 768px) {
-
 
         .main-banner .logo__image {
             margin-right: 10px;
             width: 24px;
             height: 24px;
         }
-        #znakrst{
-           visibility: hidden;
+
+        #znakrst {
+            visibility: hidden;
         }
+
         .main-banner .logo__title {
             font-size: 12px;
         }
@@ -208,65 +213,60 @@
         .main-banner .logo__description {
             display: none;
         }
+
         .main-banner .logo--wrap1 {
             display: none;
         }
 
-
     }
-
-
-
-
-
-
 
 
 </Style>
 
 <style>
-    @font-face{
-        font-family:'Glyphicons Halflings';
-        src:url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.eot');
-        src:url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+    @font-face {
+        font-family: 'Glyphicons Halflings';
+        src: url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.eot');
+        src: url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
         url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.woff') format('woff'),
         url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.ttf') format('truetype'),
         url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg')
     }
 
-
-    .dataTables_info{
+    .dataTables_info {
         width: 100%;
     }
-    .datatable_filter{
+
+    .datatable_filter {
         left: 540px;
         position: absolute;
         top: 0px;
     }
 
-
     .dataTables_length select {
         padding: 5px 10px;
         margin: 1px 10px 1px 10px;
     }
-    .html5buttons{
+
+    .html5buttons {
         position: absolute;
         top: 0px;
         left: 85%;
     }
 
-    .dataTables_filter{
-    position: absolute;
-    top: 0px;
-    left: 690px;
+    .dataTables_filter {
+        position: absolute;
+        top: 0px;
+        left: 690px;
     }
-    .dataTable{
-        border: 1px solid #d4d4d6;
-    }
-    .dataTable td{
+
+    .dataTable {
         border: 1px solid #d4d4d6;
     }
 
+    .dataTable td {
+        border: 1px solid #d4d4d6;
+    }
 
     .dataTable th {
         color: #055a1a;
@@ -282,8 +282,6 @@
         display: inline-block;
         width: 202px;
 
-
-
     }
 </style>
 
@@ -291,6 +289,7 @@
     .btn {
         border-radius: 3px;
     }
+
     .btn-group-vertical .btn, .btn-group .btn {
         margin-bottom: 0;
         margin-right: 0;
@@ -301,14 +300,14 @@
         background-color: #fff;
         border-color: #ccc;
     }
-    .btn-default:active:hover{
+
+    .btn-default:active:hover {
         color: #333;
         background-color: #d4d4d4;
         border-color: #8c8c8c;
     }
 
-
-    .btn-default span :active:hover:focus{
+    .btn-default span :active:hover:focus {
         color: #333;
 
     }
@@ -327,28 +326,33 @@
         background-color: #fafafa;
         font-size: 12px
     }
-    .btn.btn-app>.fa,
-    .btn.btn-app>.glyphicon,
-    .btn.btn-app>.ion {
+
+    .btn.btn-app > .fa,
+    .btn.btn-app > .glyphicon,
+    .btn.btn-app > .ion {
         font-size: 20px;
         display: block
     }
+
     .btn.btn-app:hover {
         background: #f4f4f4;
         color: #444;
         border-color: #aaa
     }
+
     .btn.btn-app:active,
     .btn.btn-app:focus {
         box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125)
     }
-    .btn.btn-app>.badge {
+
+    .btn.btn-app > .badge {
         position: absolute;
         top: -3px;
         right: -10px;
         font-size: 10px;
         font-weight: 400
     }
+
     .dataTables_paginate {
         float: right;
         text-align: right;
@@ -361,32 +365,35 @@
         border-color: #ddd !important;
         color: #055a1a;
     }
+
     .paging_full_numbers a.paginate_active {
         background-color: rgba(38, 185, 154, 0.59) !important;
         border-color: rgba(38, 185, 154, 0.59) !important
     }
+
     .pagination {
         float: right;
     }
-    .pagination>li:first-child>a, .pagination>li:first-child>span {
+
+    .pagination > li:first-child > a, .pagination > li:first-child > span {
         margin-left: 0;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
     }
-    .btn-group .buttons-html5{
+
+    .btn-group .buttons-html5 {
         margin: 0 5px 0 5px;
     }
 
-
     @media (max-width: 799px) {
-        .dataTables_wrapper
-        {
+        .dataTables_wrapper {
             margin-top: 50px;
         }
 
-        .dataTables_length{
+        .dataTables_length {
             display: none;
         }
+
         .html5buttons {
             display: none;
         }
@@ -396,7 +403,8 @@
             top: 0px;
             left: 10px;
         }
-        .dataTables_info{
+
+        .dataTables_info {
             display: none;
         }
 
@@ -407,8 +415,9 @@
         }
 
     }
-    @media (min-width: 992px){
-        #znakrst{
+
+    @media (min-width: 992px) {
+        #znakrst {
             width: 140px;
             height: 73px;
 
@@ -427,9 +436,9 @@
         }
     }
 
-    @media (min-width: 1200px){
+    @media (min-width: 1200px) {
 
-        #znakrst{
+        #znakrst {
             width: 140px;
             height: 73px;
 
@@ -440,7 +449,6 @@
             top: 0px;
             left: 590px;
         }
-
 
         div.dataTables_wrapper div.dataTables_filter input {
             margin-left: 0.5em;
@@ -453,27 +461,35 @@
 </style>
 
 <section id="topbar" class="d-lg-block">
-    <div class="container  clearfix">
-        <div class="main-banner">
-            <div class="logo--wrap">
-                <a href="/" class="logo">
-                    <img src="/static/gerb.png" alt="Логотип Росстандарта" class="logo__image">
-                    <div class="logo__text">
-                        <div class="logo__description">Росстандарт</div>
-                        <div class="logo__title">Национальная система сертификации</div>
+    <div class="c-header">
+        <div class="c-headline">
+            <div class="c-headline__left">
+                <a href="/" class="c-logo">
+                    <img width="73" height="80" src="/static/gerb.png" alt="Логотип Росстандарта" class="c-logo__image">
+                    <div class="c-logo__text">
+                        <div class="c-logo__description">Росстандарт</div>
+                        <div class="c-logo__title">Национальная система сертификации</div>
                     </div>
                 </a>
             </div>
-            <div class="logo--wrap" >
-                <a href="/" class="logo">
-                    <img id="znakrst" src="/static/znak_green.svg" alt="Знак НСС" class="logo__image" style="width: 140px; height: 73px;" >
+            <div class="c-headline__center">
+                <a href="/" class="c-state">
+                    <img width="140" height="73" src="/static/znak.jpg" alt="Знак НСС" class="c-state__image">
                 </a>
             </div>
-            <div class="logo--wrap1">
-                <div class="logo__text">
-                    <div class="logo__title">Горячая линия <i class="fa fa-phone"></i> 8(495)531-26-40</div>
-                    <div class="logo__description">
-                        По вопросам работы системы обращаться на адрес <i class="fa fa-envelope-o"></i> <a href="mailto:ncs@gostinfo.ru">ncs@gostinfo.ru</a>
+            <div class="c-headline__right">
+                <div class="c-contacts">
+                    <div class="c-contacts__title">
+                        <span class="c-contacts__phone">
+                            Горячая линия
+                            <i class="c-contacts__phone-icon fa fa-phone"></i>
+                            8(495)531-26-40
+                        </span>
+                    </div>
+                    <div class="c-contacts__description">
+                        По вопросам работы системы обращаться на адрес
+                        <i class="fa fa-envelope-o"></i>
+                        <a href="mailto:ncs@gostinfo.ru">ncs@gostinfo.ru</a>
                     </div>
                 </div>
             </div>
@@ -499,13 +515,15 @@
                 <li><a href="/documents">Документы</a></li>
 
                 <li class="menu-has-children"><a href="/registry">Реестры</a>
-                    <ul class="nav-menu1" >
-                        <li><a href="/registry/sert">Реестр объектов оценки соответствия, маркированных <br> знаком национальной системы стандартизации</a></li>
+                    <ul class="nav-menu1">
+                        <li><a href="/registry/sert">Реестр объектов оценки соответствия, маркированных <br> знаком
+                            национальной системы стандартизации</a></li>
                         <li><a href="/registry/certificationbodies">Реестр органов по сертификации</a></li>
                         <li><a href="/registry/testinglaboratories"> Реестр испытательных лабораторий</a></li>
                         <li><a href="/registry/technicalexperts"> Реестр технических экспертов</a></li>
                         <li><a href="/registry/inspectionbodies"> Реестр органов инспекции</a></li>
-                        <li><a href="/registry/blacklistmanufacturers">Реестр продукции, соответствие которой требованиям нац. стандартов не подтверждено</a></li>
+                        <li><a href="/registry/blacklistmanufacturers">Реестр продукции, соответствие которой
+                            требованиям нац. стандартов не подтверждено</a></li>
                     </ul>
                 </li>
                 <li><a href="/contact">Контакты</a></li>
