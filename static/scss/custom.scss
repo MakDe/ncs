@@ -190,6 +190,12 @@ body.custom {
     }
   }
 
+  #footer {
+    position: static !important;
+    height: auto !important;
+    width: auto !important;
+  }
+
   &.mobile-nav-active {
 
     #mobile-nav-toggle i {
