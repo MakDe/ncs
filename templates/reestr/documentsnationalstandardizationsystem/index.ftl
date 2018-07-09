@@ -13,6 +13,7 @@
                         text-align: center;
                     }
                 </style>
+
                 <table id="datatable" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%; background-color: #FFFFFF">
                     <thead>
                     <tr>

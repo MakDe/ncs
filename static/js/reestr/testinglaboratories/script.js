@@ -133,7 +133,7 @@ function init_PublishedDataTables() {
 
                     if (data!='')
                     {
-                        return '<a href="/registry/testinglaboratories/downloadfile/'+row[6]+'/" ><i class="fa fa-download"></i> <b>' +data+'</b></a>';
+                        return '<a class="c-down" href="/registry/testinglaboratories/downloadfile/'+row[6]+'/" ><i class="fa fa-download"></i> <b>' +data+'</b></a>';
                     }
                     else
                     {

@@ -141,7 +141,7 @@ function init_PublishedDataTables() {
 
                     if (data!='')
                     {
-                        return '<a  href="/registry/certificationbodies/downloadfile/'+row[6]+'/" ><i class="fa fa-download"></i> <b></b></a>';
+                        return '<a class="c-down" href="/registry/certificationbodies/downloadfile/'+row[6]+'/" ><i class="fa fa-download"></i> <b></b></a>';
                     }
                     else
                     {

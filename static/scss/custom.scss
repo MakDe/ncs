@@ -10,6 +10,43 @@ $z-index-headline: 900;
 }
 
 body.custom {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  h2 {
+    @media (max-width: $screen-md-down) {
+      font-size: 22px;
+    }
+  }
+
+  #header {
+    transitiion: none;
+    width: 100% !important;
+    z-index: 505 !important;
+
+    @media (max-width: $screen-md-down) {
+      height: auto;
+      display: none;
+    }
+  }
+
+  .c-tabble {
+    overflow: hidden;
+    padding-top: 5px;
+  }
+
+  #clients .znakimg {
+    height: auto !important;
+
+    @media (max-width: $screen-lg-down) {
+      display: block;
+      width: 90px !important;
+      padding-top: 0;
+      padding-bottom: 0;
+      visibility: visible;
+    }
+  }
 
   #mobile-nav-toggle {
     @media (max-width: $screen-md-down) {
@@ -18,11 +55,135 @@ body.custom {
     }
   }
 
+  .nav-menu {
+    .menu-has-children {
+      a {
+        padding-right: 22px;
+      }
+    }
+  }
+
   #topbar {
     padding-top: 0;
   }
 
+  #datatables_buttons_info {
+    @media (max-width: $screen-md-down) {
+      width: 290px;
+      margin-left: -145px;
+    }
+  }
+
+  .dataTables_length {
+    order: 1;
+    margin-right: 30px;
+
+    @media (max-width: $screen-md-down - 1px) {
+      margin-right: 0;
+    }
+  }
+
+  .dataTables_filter {
+    order: 2;
+    margin-right: 30px;
+    margin-left: auto;
+
+    label {
+      margin-right: 0;
+    }
+
+    @media (max-width: $screen-lg-down) {
+      margin-right: 0;
+    }
+
+    @media (max-width: $screen-md-down - 1px) {
+      display: flex;
+      margin-left: 0;
+      width: 100%;
+      margin-top: 8px;
+    }
+  }
+
+  .html5buttons {
+    order: 3;
+
+    @media (max-width: $screen-lg-down) {
+      margin-top: 8px;
+      width: 100%;
+    }
+  }
+
+  .dataTables_info {
+    order: 4;
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  table.dataTable {
+    order: 5;
+    //word-break: break-word;
+
+    td {
+      position: relative;
+
+      a.c-down {
+        position: absolute;
+        display: inline-block;
+        padding: 5px;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        font-size: 0;
+        line-height: 0;
+
+        .fa.fa-download {
+          font-size: 22px;
+        }
+      }
+
+      li {
+        word-break: break-word;
+
+        a.c-down {
+          position: static;
+          padding: 5px;
+          transform: translate3d(0, 0, 0);
+
+          .fa.fa-download {
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+
+  div.dataTables_wrapper div.dataTables_paginate {
+    order: 6;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  #datatable {
+    display: none !important;
+  }
+
+  #datatable_wrapper {
+    #datatable {
+      display: table !important;
+    }
+  }
+
+  .legend {
+    float: none;
+    height: auto;
+    margin-top: 15px;
+  }
+
   #main {
+    overflow: hidden;
+    flex-grow: 1;
+
     @media (max-width: $screen-md-down) {
       padding-top: 45px;
     }
@@ -190,10 +351,86 @@ body.custom {
     }
   }
 
+  #services {
+    min-height: 0;
+    padding-bottom: 30px;
+  }
+
+  .c-map-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 50%;
+  }
+
+  .c-map {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .jqvmap-zoomin,
+  .jqvmap-zoomout{
+    background-size: contain;
+    top: 50%;
+    margin-top: -50px;
+    left: 5px;
+
+    @media (max-width: 480px) {
+      margin-top: -40px;
+      width: 20px;
+    }
+  }
+
+  .c-map-block {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  #aaa {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .jqvmap-zoomout {
+    margin-top: 10px;
+  }
+
+
+  #services {
+    .c-registry-item {
+      display: block;
+      height: auto;
+      min-height: 169px;
+      color: black;
+
+      .icon{
+        i {
+          color: #50d8af;
+
+          &:before {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+
   #footer {
     position: static !important;
     height: auto !important;
     width: auto !important;
+  }
+
+  .pagination {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    padding: 3px;
+    padding-left: 0;
+    margin-right: -3px !important;
+    margin-left: -3px !important;
   }
 
   &.mobile-nav-active {

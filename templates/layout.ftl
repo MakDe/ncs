@@ -44,6 +44,7 @@ ${context.style}
 </head>
 
 <body id="body" class="custom">
+<button type="button" id="mobile-nav-toggle"><i class="fa fa-bars"></i></button>
 
 <!--==========================
   Top Bar
@@ -145,11 +146,6 @@ ${context.style}
             display: none;
         }
 
-        #vmap {
-            height: 220px;
-            width: 410px;
-        }
-
         #txtStatWorkerTotal {
             display: block;
             position: inherit;
@@ -233,31 +229,9 @@ ${context.style}
         url('/static/vendors/bootstrap//fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg')
     }
 
-    .dataTables_info {
-        width: 100%;
-    }
-
-    .datatable_filter {
-        left: 540px;
-        position: absolute;
-        top: 0px;
-    }
-
     .dataTables_length select {
         padding: 5px 10px;
         margin: 1px 10px 1px 10px;
-    }
-
-    .html5buttons {
-        position: absolute;
-        top: 0px;
-        left: 85%;
-    }
-
-    .dataTables_filter {
-        position: absolute;
-        top: 0px;
-        left: 690px;
     }
 
     .dataTable {
@@ -275,13 +249,6 @@ ${context.style}
 
     .dataTables_filter label {
         margin-right: 5px;
-    }
-
-    div.dataTables_wrapper div.dataTables_filter input {
-        margin-left: 0.5em;
-        display: inline-block;
-        width: 202px;
-
     }
 </style>
 
@@ -317,7 +284,6 @@ ${context.style}
         padding: 15px 5px;
         margin: 0 0 10px 10px;
         min-width: 80px;
-        height: 60px;
         box-shadow: none;
         border-radius: 0;
         text-align: center;
@@ -354,7 +320,6 @@ ${context.style}
     }
 
     .dataTables_paginate {
-        float: right;
         text-align: right;
         width: 100%;
     }
@@ -371,10 +336,6 @@ ${context.style}
         border-color: rgba(38, 185, 154, 0.59) !important
     }
 
-    .pagination {
-        float: right;
-    }
-
     .pagination > li:first-child > a, .pagination > li:first-child > span {
         margin-left: 0;
         border-top-left-radius: 4px;
@@ -384,80 +345,6 @@ ${context.style}
     .btn-group .buttons-html5 {
         margin: 0 5px 0 5px;
     }
-
-    @media (max-width: 799px) {
-        .dataTables_wrapper {
-            margin-top: 50px;
-        }
-
-        .dataTables_length {
-            display: none;
-        }
-
-        .html5buttons {
-            display: none;
-        }
-
-        .dataTables_filter {
-            /*position: absolute;*/
-            top: 0px;
-            left: 10px;
-        }
-
-        .dataTables_info {
-            display: none;
-        }
-
-        div.dataTables_wrapper div.dataTables_filter input {
-            margin-left: 0.5em;
-            display: inline-block;
-            width: 280px;
-        }
-
-    }
-
-    @media (min-width: 992px) {
-        #znakrst {
-            width: 140px;
-            height: 73px;
-
-        }
-
-        .dataTables_filter {
-            /*position: absolute;*/
-            top: 0px;
-            left: 300px;
-        }
-
-        div.dataTables_wrapper div.dataTables_filter input {
-            margin-left: 0.5em;
-            display: inline-block;
-            width: 280px;
-        }
-    }
-
-    @media (min-width: 1200px) {
-
-        #znakrst {
-            width: 140px;
-            height: 73px;
-
-        }
-
-        .dataTables_filter {
-            /*position: absolute;*/
-            top: 0px;
-            left: 590px;
-        }
-
-        div.dataTables_wrapper div.dataTables_filter input {
-            margin-left: 0.5em;
-            display: inline-block;
-            width: 280px;
-        }
-    }
-
-
 </style>
 
 <section id="topbar" class="d-lg-block">
@@ -595,5 +482,6 @@ ${context.style}
 
 ${context.script}
 
+<script src="/static/js/custom.js" defer></script>
 </body>
 </html>

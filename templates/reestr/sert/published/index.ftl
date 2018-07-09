@@ -1,17 +1,41 @@
-
 <section id="clients" class="wow fadeInUp">
     <div class="container">
         <div class="section-header">
             <div class="row">
-                <div class="col-lg-11"><h2>Реестр объектов оценки соответствия, маркированных знаком национальной системы стандартизации</h2>
-            <p></p>
+                <div class="col-lg-11"><h2>Реестр объектов оценки соответствия, маркированных знаком национальной
+                    системы стандартизации</h2>
+                    <p></p>
 
                 </div>
-                <div class="col-lg-1"><img id="znakrst" src="/static/znak_green.svg" alt="Знак НСС" class="znakimg" style="width: 140px; height: 73px;"></div>
-        </div>
+                <div class="col-lg-1"><img id="znakrst" src="/static/znak.jpg" alt="Знак НСС" class="znakimg"
+                                           style="width: 140px; height: 73px;"></div>
+            </div>
 
+        </div>
         <div class="row">
             <div class="col-lg-12">
+                <div class="c-tabble">
+                    <table id="datatable" class="table table-striped table-bordered dataTable no-footer dtr-inline"
+                           style="width: 100%; background-color: #FFFFFF">
+                        <thead>
+                        <tr>
+                            <th>Статус</th>
+                            <th>Наименование продукции</th>
+                            <th>Наименование изготовителя</th>
+                            <th>Контактные данные изготовителя</th>
+                            <th>Требование национального стандарта</th>
+                            <th>Орган по сертификации</th>
+                            <th>Контактные данные органа по сертификации</th>
+
+
+                            <th></th>
+                            <th></th>
+                        </tr>
+                        </thead>
+
+
+                    </table>
+                </div>
                 <style>
 
 
@@ -22,38 +46,18 @@
                         padding: 15px 0;
                     }
 
-                    @media (max-width: 767px){
+                    @media (max-width: 767px) {
                         #clients .znakimg {
                             display: none;
                         }
                     }
 
-                    #datatable th{
+                    #datatable th {
                         text-align: center;
                     }
                 </style>
 
 
-                        <table id="datatable" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%; background-color: #FFFFFF">
-                            <thead>
-                            <tr>
-                                <th>Статус</th>
-                                <th>Наименование продукции</th>
-                                <th>Наименование изготовителя</th>
-                                <th>Контактные данные изготовителя</th>
-                                <th>Требование национального стандарта</th>
-                                <th>Орган по сертификации</th>
-                                <th>Контактные данные органа по сертификации</th>
-
-
-
-                                <th></th>
-                                <th></th>
-                            </tr>
-                            </thead>
-
-
-                        </table>
                 <style>
                     /* legend */
 
@@ -62,7 +66,7 @@
                         height: 20px;
                     }
 
-                    .legend span{
+                    .legend span {
                         margin-right: 10px;
                         line-height: 20px;
                     }
@@ -121,8 +125,6 @@
 
             </div>
         </div>
-
-    </div>
 
 
 

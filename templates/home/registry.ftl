@@ -36,52 +36,52 @@
             <div class="row">
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInLeft">
+                    <a class="c-registry-item box wow fadeInLeft" href="/registry/sert">
                         <div class="icon"><i class="fa fa-th"></i></div>
-                        <h4 class="title"><a href="/registry/sert">Объекты оценки соответствия</a></h4>
+                        <h4 class="title">Объекты оценки соответствия</h4>
                         <p class="description">Реестр объектов оценки соответствия, маркированных знаком национальной системы стандартизации.</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInRight">
+                    <a class="c-registry-item box wow fadeInRight" href="/registry/certificationbodies">
                         <div class="icon"><i class="fa fa-cogs"></i></div>
-                        <h4 class="title"><a href="/registry/certificationbodies">Органы по сертификации</a></h4>
+                        <h4 class="title">Органы по сертификации</h4>
                         <p class="description">Реестр органов по сертификации.</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                    <a class="c-registry-item box wow fadeInLeft" href="/registry/testinglaboratories" data-wow-delay="0.2s">
                         <div class="icon"><i class="fa fa-flask"></i></div>
-                        <h4 class="title"><a href="/registry/testinglaboratories">Испытательные лаборатории</a></h4>
+                        <h4 class="title">Испытательные лаборатории</h4>
                         <p class="description"> Реестр испытательных лабораторий.</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInRight" data-wow-delay="0.2s">
+                    <a class="c-registry-item box wow fadeInRight" href="/registry/technicalexperts" data-wow-delay="0.2s">
                         <div class="icon"><i class="fa fa-group"></i></div>
-                        <h4 class="title"><a href="/registry/technicalexperts">Технические эксперты</a></h4>
+                        <h4 class="title">Технические эксперты</h4>
                         <p class="description">Реестр технических экспертов</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInLeft" data-wow-delay="0.2s">
+                    <a class="c-registry-item box wow fadeInLeft" href="/registry/inspectionbodies" data-wow-delay="0.2s">
                         <div class="icon"><i class="fa fa-check-square-o"></i></div>
-                        <h4 class="title"><a href="/registry/inspectionbodies">Реестр органов инспекции</a></h4>
+                        <h4 class="title">Реестр органов инспекции</h4>
                         <p class="description">Реестр органов инспекции.</p>
-                    </div>
+                    </a>
                 </div>
 
 
                 <div class="col-lg-6">
-                    <div class="box wow fadeInRight" data-wow-delay="0.2s">
+                    <a class="c-registry-item box wow fadeInRight" href="/registry/blacklistmanufacturers" data-wow-delay="0.2s">
                         <div class="icon"><i class="fa fa-eye-slash"></i></div>
-                        <h4 class="title"><a href="/registry/blacklistmanufacturers">Реестр продукции, соответствие которой требованиям нац. стандартов не подтверждено</a></h4>
+                        <h4 class="title">Реестр продукции, соответствие которой требованиям нац. стандартов не подтверждено</h4>
                         <p class="description"></p>
-                    </div>
+                    </a>
                 </div>
 
             </div>
