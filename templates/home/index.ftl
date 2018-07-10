@@ -169,26 +169,38 @@
                 </div>
             </div>
         </div>
+        <section id="testimonials" class="testimonials-main">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Результаты нашей деятельности</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <a href="/registry/sert" class="testimonial-item">
+                            <h3 class="title">Сертифицированных объектов</h3>
+                            <p>
+                                ${context.reestr_sert}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="/registry/sert" class="testimonial-item">
+                            <h3 class="title">Органов по сертификации</h3>
+                            <p>
+                                ${context.certificationbodies}
+                            </p>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <a href="/registry/sert" class="testimonial-item">
+                            <h3 class="title">Испытательных лабораторий</h3>
+                            <p>
+                                ${context.laboratory}
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
     </section>
-
- <section id="aaa">
-     <div class="container">
-         <div class="row">
-             <a href="/registry/sert" class="col-lg-4">
-                    <span id="txtStatWorkerTotal" class="has-tooltip">
-                <span class="txt-stat-caption">Сертифицированных объектов:</span><br>
-                <span class="txt-stat-value">${context.reestr_sert}</span>
-             </a>
-             <a href="/registry/certificationbodies" class="col-lg-4"><span id="txtStatProductionTotal">
-                <span class="txt-stat-caption">Органов по сертификации:</span><br>
-                <span class="txt-stat-value">${context.certificationbodies}</span>
-                </span></a>
-             <a href="/registry/testinglaboratories" class="col-lg-4"><span id="txtStatProductionTotal">
-                <span class="txt-stat-caption">Испытательных лабораторий:</span><br>
-                <span class="txt-stat-value">${context.laboratory}</span>
-                </span></a>
-         </div>
-     </div>
- </section>
-
 <!-- #services -->

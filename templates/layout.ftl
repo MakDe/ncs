@@ -35,10 +35,10 @@
 
 
     <!-- Main Stylesheet File -->
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/style.css?v=1" rel="stylesheet">
 
     <!-- Custom -->
-    <link href="/static/css/custom.css" rel="stylesheet">
+    <link href="/static/css/custom.css?v=1" rel="stylesheet">
 ${context.style}
 
 </head>
