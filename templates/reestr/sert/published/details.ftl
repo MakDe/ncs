@@ -19,11 +19,14 @@
                         <dd>${context.reestrSert.getOrg2_name()}</dd>
                         <dt>Номер(а) телефона изготовителя продукции</dt>
                     <dd>
+                    <#if context.reestrSert.getOrg2_phone()??>
                         <ul>
                         <#foreach item in context.reestrSert.getOrg2_phone()>
                            <li>${item!"Unknown"}1</li>
                         </#foreach>
                         </ul>
+                    </#if>
+
                     </dd>
                         <dt>Адреса электронной почты изготовителя продукции</dt>
                         <dd>

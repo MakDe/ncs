@@ -23,6 +23,7 @@ $(document).ready(function() {
 
     $.ajax({
         url : "/statistics/map/loadAllJSON/",
+        //url : "/static/test/map.json",
         type : 'get',
         dataType: 'json',
         // traditional: true,

@@ -19,7 +19,7 @@
                         <dd>
                             <ul>
                         <#foreach item in context.reestrLaboratories.getLab_fiz_addr()>
-                            <li>${item!"Unknown"}1</li>
+                            <li>${item!"Unknown"}</li>
                         </#foreach>
                             </ul>
                         </dd>
@@ -28,7 +28,7 @@
                         <dd>
                             <ul>
                         <#foreach item in context.reestrLaboratories.getLab_yur_phone()>
-                            <li>${item!"Unknown"}1</li>
+                            <li>${item!"Unknown"}</li>
                         </#foreach>
                             </ul>
                         </dd>
