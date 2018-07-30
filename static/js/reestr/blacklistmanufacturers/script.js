@@ -26,25 +26,11 @@ $(document).ready(function() {
    ============================-->*/
 function init_PublishedDataTables() {
 
-
-
-
-
-    var table =$('#datatable').dataTable({
-        processing : true,
-        //ajax: "/reestr/sert/loadAllJSON/",
-        // ajax: "/js/datatables/demo1.json",
-
-        // AjaxDataProp:"",
-
+    $('#datatable').dataTable({
         'order': [[ 1, 'asc' ]],
-        //"/reestr/sert/loadAllJSON/"
-
-        ajax : {
-            url :"/registry/blacklistmanufacturers/loadAllJSON/",
-            //dataSrc : 'Data'
-            dataSrc : 'aaData'
-        },
+        "processing": true,
+        "serverSide": true,
+        // "ajax": "/registry/sert/loadAllJSONtest/",
         columnDefs: [
             /* {
                  "targets": [6],
@@ -60,7 +46,7 @@ function init_PublishedDataTables() {
                 ,"render": function (data, type, row, meta) {
                     // console.log(type, data, row,meta);
                     var result='';
-                    switch (data) {
+                    switch (row["Reestr_sert_status_id"]) {
                         case '0':
                             result= '<span class="status-ico orange" title="Приостановлен">&nbsp;&nbsp;&nbsp;</span>';
                             break;
@@ -92,8 +78,8 @@ function init_PublishedDataTables() {
                 "orderable": true,
                 "width": "10%"
                 ,"render": function (data, type, row, meta) {
-                   // console.log(type, data, row,meta);
-                    return '<a href="/registry/blacklistmanufacturers/details/'+row[6]+'" class="" >' +data+'</a>';
+                    // console.log(type, data, row,meta);
+                    return '<a href="/registry/blacklistmanufacturers/details/'+row["Id"]+'" class="" >' +row["publish_date"]+'</a>';
                 }
             },
             {
@@ -103,8 +89,8 @@ function init_PublishedDataTables() {
                 "orderable": true,
                 "width": "5%"
                 ,"render": function (data, type, row, meta) {
-                   // console.log(type, data, row,meta);
-                    return '<a href="/registry/blacklistmanufacturers/details/'+row[6]+'" class="" >' +data+'</a>';
+                    // console.log(type, data, row,meta);
+                    return '<a href="/registry/blacklistmanufacturers/details/'+row["Id"]+'" class="" >' +row["Prod_name"]+'</a>';
                 }
             },
             {
@@ -114,8 +100,8 @@ function init_PublishedDataTables() {
                 "orderable": true,
                 "width": "5%"
                 ,"render": function (data, type, row, meta) {
-                   // console.log(type, data, row,meta);
-                    return '<a href="/registry/blacklistmanufacturers/details/'+row[6]+'" class="" >' +data+'</a>';
+                    // console.log(type, data, row,meta);
+                    return '<a href="/registry/blacklistmanufacturers/details/'+row["Id"]+'" class="" >' +row["Org2_name"]+'</a>';
                 }
             },
             {
@@ -126,17 +112,18 @@ function init_PublishedDataTables() {
                 "width": "15%"
                 ,"render": function (data, type, row, meta) {
                     //console.log(type, data, row,meta);
-                    return '<a href="/registry/blacklistmanufacturers/details/'+row[6]+'" class="" >' +data+'</a>';
+                    return '<a href="/registry/blacklistmanufacturers/details/'+row["Id"]+'" class="" >' +row["Note"]+'</a>';
                 }
-            },
+            }
+            /*,
             {
                 "targets": [5],
-                "visible": true,
-                "searchable": true,
-                "orderable": true,
+                "visible": false,
+                "searchable": false,
+                "orderable": false,
                 "width": "5%"
                 ,"render": function (data, type, row, meta) {
-                   // console.log(type, data, row,meta);
+                    // console.log(type, data, row,meta);
                     return '<a href="/registry/blacklistmanufacturers/details/'+row[6]+'" class="" >' +data+'</a>';
                 }
             },
@@ -153,6 +140,7 @@ function init_PublishedDataTables() {
                     return '<a href="javascript:void(0)"  style="width: 93.91px;"  class="btn btn-app" onclick="ViewСhecking('+data+',event)"><i class="fa fa-edit"></i> Посмотреть</a>';
                 }
             }
+            */
             //,
             //Поля только для поиска
             /*{
@@ -178,10 +166,6 @@ function init_PublishedDataTables() {
             },*/
 
         ],
-
-
-
-
         language: {
             "url": "/static/js/datatables/Russian.json"
         },
@@ -195,37 +179,74 @@ function init_PublishedDataTables() {
                 extend: "csv",
                 className: "btn-sm"
             },
-           /* {
-                extend: "excel",
-                className: "btn-sm"
-            },
-            {
-                extend: "pdfHtml5",
-                className: "btn-sm"
-            },*/
+            /* {
+                 extend: "excel",
+                 className: "btn-sm"
+             },
+             {
+                 extend: "pdfHtml5",
+                 className: "btn-sm"
+             },*/
             {
                 extend: "print",
                 className: "btn-sm"
             },
         ],
         responsive: true,
+        fnServerParams: function ( aoData ) {
+            //aoData.push( { "name": "more_data", "value": "my_value" } );
+            /*if(aoData.search.value.length >= 3 ) {
+                // Call the API search function
+                //dtable.search(this.value).draw();
+                //alert("123456");
+            }*/
+        },
+
+        "stateSave": true,
+        "sAjaxSource": "/registry/blacklistmanufacturers/loadAllJSON/",
+        "fnServerData": function (sSource, aoData, fnCallback) {
+            if (aoData[30].value==="" || aoData[30].value.length >= 1) {
+                //aoData[50].value = "";
+
+                $.ajax({
+                    "type": "GET",
+                    "dataType": 'json',
+                    "contentType": "application/json; charset=utf-8",
+                    "url": sSource,
+                    "data": aoData,
+                    "success": function (data) {
+                        fnCallback(data);
+                    }
+                });
+            }
+
+        },
+
 
         fnRowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+
+
             jQuery(nRow).attr('id', aData[6]);
             // jQuery(nRow).css("cursor", "pointer");
 
             return nRow;
         }
+        /*"columns": [
+            { "data": "Reestr_sert_status_id" },
+            { "data": "Prod_short_name" },
+            { "data": "Org2_name" },
+            { "data": "Org2_contact" },
+            { "data": "Std" },
+            { "data": "Org3_name" },
+            { "data": "Org3_contact" },
+            { "data": "Id" },
+            { "data": "Adm_org_id" }
+        ]*/
     });
 
-    var query = decodeURIComponent(GetURLParameter('qname'));
-    if(query&& query!='undefined')
-    {
-       // var table = $('#datatable').dataTable({ "retrieve": true }).api();
-        table.fnFilter( query );
-        //table.fnFilter(query, 2, true);
-        //table.search(query.filterfiltre).draw();
-    }
+
+
+
 
 
 };

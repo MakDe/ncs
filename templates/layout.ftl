@@ -33,6 +33,8 @@
     <link href="/static/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="/static/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
+    <link href="/static/js/map/map.css?v=1" rel="stylesheet">
+
 
     <!-- Main Stylesheet File -->
     <link href="/static/css/style.css?v=1" rel="stylesheet">
@@ -482,7 +484,9 @@ ${context.style}
 
 ${context.script}
 
-<script src="/static/js/custom.js" defer></script>
+
+<script src="/static/js/map/map.js"></script>
+<script src="/static/js/map/custom.js"></script>
 
 
 <!-- Yandex.Metrika counter -->

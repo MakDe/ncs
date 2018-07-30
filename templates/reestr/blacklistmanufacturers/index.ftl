@@ -27,6 +27,7 @@
                 <table id="datatable" class="table table-striped table-bordered dataTable no-footer dtr-inline" style="width: 100%; background-color: #FFFFFF">
                     <thead>
                     <tr>
+                        <th>Статус</th>
                         <th>Дата внесения в реестр</th>
                         <th>Наименование продукции</th>
                         <th>Наименование изготовителя</th>

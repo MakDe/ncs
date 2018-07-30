@@ -171,7 +171,7 @@ var JQVMap = function (params) {
             }
             if (params.showTooltip) {
                 map.label.text(mapData.paths[code].name);
-                jQuery(params.container).trigger(labelShowEvent, [map.label, code]);
+                jQuery(params.container).trigger(labelShowEvent, [map.label, code,mapData]);
 
                 if (!labelShowEvent.isDefaultPrevented()) {
                     map.label.show();
